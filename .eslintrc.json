@@ -4,7 +4,6 @@
 	"extends": [
 		"wordpress",
 		"plugin:react/recommended",
-		"plugin:jsx-a11y/recommended",
 		"plugin:jest/recommended"
 	],
 	"env": {
@@ -33,13 +32,13 @@
 		}
 	},
 	"rules": {
-		"array-bracket-spacing": ["error", "always"],
+		"array-bracket-spacing": ["warn", "always"],
 		"brace-style": ["error", "1tbs"],
 		"camelcase": ["error", { "properties": "never" }],
 		"comma-dangle": ["error", "always-multiline"],
 		"comma-spacing": "error",
 		"comma-style": "error",
-		"computed-property-spacing": ["error", "always"],
+		"computed-property-spacing": ["warn", "always"],
 		"constructor-super": "error",
 		"dot-notation": "error",
 		"eol-last": "error",
@@ -138,7 +137,7 @@
 				"message": "Translate function arguments must be string literals."
 			}
 		],
-		"no-shadow": "error",
+		"no-shadow": "warn",
 		"no-undef": "error",
 		"no-undef-init": "error",
 		"no-unreachable": "error",
@@ -154,9 +153,10 @@
 		"padded-blocks": ["error", "never"],
 		"prefer-const": "error",
 		"quote-props": ["error", "as-needed"],
+		"quotes": ["error", "double"],
 		"react/display-name": "off",
 		"react/jsx-curly-spacing": [
-			"error",
+			"warn",
 			{
 				"when": "always",
 				"children": true
@@ -165,7 +165,7 @@
 		"react/jsx-equals-spacing": "error",
 		"react/jsx-indent": ["error", "tab"],
 		"react/jsx-indent-props": ["error", "tab"],
-		"react/jsx-key": "error",
+		"react/jsx-key": "warn",
 		"react/jsx-tag-spacing": "error",
 		"react/no-children-prop": "off",
 		"react/no-find-dom-node": "warn",
@@ -174,7 +174,7 @@
 		"semi-spacing": "error",
 		"space-before-blocks": ["error", "always"],
 		"space-before-function-paren": ["error", "never"],
-		"space-in-parens": ["error", "always"],
+		"space-in-parens": ["error", "never"],
 		"space-infix-ops": ["error", { "int32Hint": false }],
 		"space-unary-ops": [
 			"error",

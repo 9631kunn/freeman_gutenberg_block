@@ -1,15 +1,11 @@
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
+.wp-block-freeman-block-slider .block-container {
+	border-bottom: 1px solid #dce5f0;
+	border-top: 1px solid #dce5f0;
+	display: flex;
+	justify-content: space-between;
+	padding: 40px 0;
 
-.wp-block-cgb-block-freeman-block  {
-  background: $green;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+	img {
+		width: calc((100% - 30px) / 3);
+	}
 }

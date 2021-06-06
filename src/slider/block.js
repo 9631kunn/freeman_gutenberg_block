@@ -1,4 +1,3 @@
-import "./style.scss";
 import "./editor.scss";
 
 const { registerBlockType } = wp.blocks;
@@ -26,8 +25,8 @@ registerBlockType("freeman-block/slider", {
 				d="M39.971 10.807h-15.5a11.54 11.54 0 00-11.472 11.61v18.554h7.925l.007-8.581h19.041v-6.962h-19.04v-3.794a3.083 3.083 0 013.085-3.107h15.954z"
 				fill="#dc0016"
 				stroke="#dc0016"
-				stroke-miterlimit="2"
-				stroke-width=".75"
+				strokeMiterlimit="2"
+				strokeWidth=".75"
 			/>
 		</svg>
 	),
@@ -49,11 +48,11 @@ registerBlockType("freeman-block/slider", {
 		const { className, attributes, setAttributes } = props;
 
 		const onSelectImage = (media) => {
-			const media_ID = media.map((image) => image.id);
+			const mediaId = media.map((image) => image.id);
 			const imageUrl = media.map((image) => image.url);
 			const imageAlt = media.map((image) => image.alt);
 			setAttributes({
-				mediaID: media_ID,
+				mediaID: mediaId,
 				imageUrl: imageUrl,
 				imageAlt: imageAlt,
 			});
@@ -61,7 +60,7 @@ registerBlockType("freeman-block/slider", {
 
 		//URL の配列から画像を生成
 		const getImages = (urls) => {
-			let imagesArray = urls.map((url) => {
+			const imagesArray = urls.map((url) => {
 				return <img src={url} className="image" alt="アップロード画像" />;
 			});
 			return imagesArray;
@@ -75,15 +74,14 @@ registerBlockType("freeman-block/slider", {
 						{getImages(attributes.imageUrl)}
 					</div>
 				);
-			} else {
-				return (
-					<div className="button-container">
-						<Button onClick={open} className="button button-large">
-							画像をアップロード
-						</Button>
-					</div>
-				);
 			}
+			return (
+				<div className="button-container">
+					<Button onClick={open} className="button button-large">
+						画像をアップロード
+					</Button>
+				</div>
+			);
 		};
 
 		//画像を削除する（メディアをリセットする）関数
@@ -107,7 +105,7 @@ registerBlockType("freeman-block/slider", {
 						render={({ open }) => getImageButton(open)}
 					/>
 				</MediaUploadCheck>
-				{attributes.imageUrl.length != 0 && ( // imageUrl（配列の長さ）で判定
+				{attributes.imageUrl.length !== 0 && ( // imageUrl（配列の長さ）で判定
 					<MediaUploadCheck>
 						<Button
 							onClick={removeMedia}
@@ -125,28 +123,26 @@ registerBlockType("freeman-block/slider", {
 	save: ({ attributes }) => {
 		//画像をレンダリングする関数
 		const getImagesSave = (url, alt) => {
-			let image_elem;
-			let imagesArray = [];
+			let imageElement;
+			const imagesArray = [];
 
 			for (let i = 0; i < url.length; i++) {
 				if (url.length === 0) {
-					image_elem = null;
+					imageElement = null;
+				} else if (alt[i]) {
+					imageElement = (
+						<div className="swiper-slide">
+							<img src={url[i]} alt={alt[i]} />
+						</div>
+					);
 				} else {
-					if (alt[i]) {
-						image_elem = (
-							<div className="swiper-slide">
-								<img src={url[i]} alt={alt[i]} />
-							</div>
-						);
-					} else {
-						image_elem = (
-							<div className="swiper-slide">
-								<img src={url[i]} alt="" aria-hidden="true" />
-							</div>
-						);
-					}
+					imageElement = (
+						<div className="swiper-slide">
+							<img src={url[i]} alt="" aria-hidden="true" />
+						</div>
+					);
 				}
-				imagesArray.push(image_elem);
+				imagesArray.push(imageElement);
 			}
 			return imagesArray;
 		};

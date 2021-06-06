@@ -1,38 +1,13 @@
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project.
-*/
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
+.wp-block-freeman-block-case {
+  background: #f5f5f5;
+  padding: 40px; }
 .wp-block-freeman-block-slider .block-container {
+  border-bottom: 1px solid #dce5f0;
+  border-top: 1px solid #dce5f0;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  padding: 40px 0; }
   .wp-block-freeman-block-slider .block-container img {
     width: calc((100% - 30px) / 3); }
-/**
- * #.# Common SCSS
- *
- * Can include things like variables and mixins
- * that are used across the project.
-*/
-/**
- * #.# Editor Styles
- *
- * CSS for just Backend enqueued after style.scss
- * which makes it higher in priority.
- */
-.wp-block-cgb-block-freeman-block {
-  background: #bada55;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }

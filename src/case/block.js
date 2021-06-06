@@ -1,7 +1,5 @@
 import "./editor.scss";
-import "./style.scss";
 
-const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const RichText = wp.editor.RichText;
 
@@ -26,17 +24,12 @@ registerBlockType("freeman-block/case", {
 				d="M39.971 10.807h-15.5a11.54 11.54 0 00-11.472 11.61v18.554h7.925l.007-8.581h19.041v-6.962h-19.04v-3.794a3.083 3.083 0 013.085-3.107h15.954z"
 				fill="#dc0016"
 				stroke="#dc0016"
-				stroke-miterlimit="2"
-				stroke-width=".75"
+				strokeMiterlimit="2"
+				strokeWidth=".75"
 			/>
 		</svg>
 	),
 	category: "common",
-	keywords: [
-		__("freeman-block — CGB Block"),
-		__("CGB Example"),
-		__("create-guten-block"),
-	],
 	attributes: {
 		children: {
 			source: "html",
@@ -46,16 +39,23 @@ registerBlockType("freeman-block/case", {
 	edit: ({ className, setAttributes, attributes }) => {
 		const { children } = attributes;
 		return (
-			<RichText
-				tagName="div"
-				className={className}
-				onChange={(children) => setAttributes({ children })}
-				value={children}
-			/>
+			<div className={className}>
+				<h3>導入事例</h3>
+				<RichText
+					tagName="div"
+					onChange={(children) => setAttributes({ children })}
+					value={children}
+				/>
+			</div>
 		);
 	},
-	save: ({ attributes }) => {
+	save: ({ className, attributes }) => {
 		const { children } = attributes;
-		return <div>{children}</div>;
+		return (
+			<div className={className}>
+				<h3>導入事例</h3>
+				<p>{children}</p>
+			</div>
+		);
 	},
 });
