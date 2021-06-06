@@ -1,10 +1,8 @@
 <?php
 /**
- * Plugin Name: freeman-block — CGB Gutenberg Block Plugin
- * Plugin URI: https://github.com/ahmadawais/create-guten-block/
- * Description: freeman-block — is a Gutenberg plugin created via create-guten-block.
- * Author: mrahmadawais, maedahbatool
- * Author URI: https://AhmadAwais.com/
+ * Plugin Name: FREEMAN block
+ * Description: 投稿作業を効率化するためのプラグインです
+ * Author: 9631kunn
  * Version: 1.0.0
  * License: GPL2+
  * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
