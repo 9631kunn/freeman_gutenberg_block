@@ -5,7 +5,7 @@ const { __ } = wp.i18n;
 const { registerBlockType } = wp.blocks;
 const RichText = wp.editor.RichText;
 
-registerBlockType("cgb/block-freeman-block", {
+registerBlockType("freeman-block/case", {
 	title: "導入事例",
 	icon: (
 		<svg

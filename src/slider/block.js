@@ -5,7 +5,7 @@ const { registerBlockType } = wp.blocks;
 const { MediaUpload, MediaUploadCheck } = wp.editor;
 const { Button } = wp.components;
 
-registerBlockType("myblock/block-image", {
+registerBlockType("freeman-block/slider", {
 	title: "スライダー",
 	icon: (
 		<svg

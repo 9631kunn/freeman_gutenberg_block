@@ -10,13 +10,13 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-cgb-block-freeman-block {
-  background: #bada55;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }
+.wp-block-freeman-block-slider .block-container {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between; }
+  .wp-block-freeman-block-slider .block-container img {
+    width: calc((100% - 30px) / 3); }
 /**
  * #.# Common SCSS
  *
