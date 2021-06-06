@@ -120,7 +120,7 @@ registerBlockType("freeman-block/slider", {
 			</div>
 		);
 	},
-	save: ({ attributes }) => {
+	save: ({ className, attributes }) => {
 		//画像をレンダリングする関数
 		const getImagesSave = (url, alt) => {
 			let imageElement;
@@ -148,14 +148,16 @@ registerBlockType("freeman-block/slider", {
 		};
 
 		return (
-			<div className="swiper-container single-slider js-single-slider">
-				<div className="swiper-wrapper">
-					{getImagesSave(attributes.imageUrl, attributes.imageAlt)}
-				</div>
-				<div className="single-slider__box">
-					<div className="swiper-button-prev"></div>
-					<div className="swiper-button-next"></div>
-					<div className="swiper-pagination"></div>
+			<div className={className}>
+				<div className="swiper-container single-slider js-single-slider">
+					<div className="swiper-wrapper">
+						{getImagesSave(attributes.imageUrl, attributes.imageAlt)}
+					</div>
+					<div className="single-slider__box">
+						<div className="swiper-button-prev"></div>
+						<div className="swiper-button-next"></div>
+						<div className="swiper-pagination"></div>
+					</div>
 				</div>
 			</div>
 		);
