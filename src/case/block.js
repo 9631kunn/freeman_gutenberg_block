@@ -51,11 +51,6 @@ registerBlockType("freeman-block/case", {
 	},
 	save: ({ className, attributes }) => {
 		const { children } = attributes;
-		return (
-			<div className={className}>
-				<h3>導入事例</h3>
-				<p>{children}</p>
-			</div>
-		);
+		return <div className={className}>{children}</div>;
 	},
 });
