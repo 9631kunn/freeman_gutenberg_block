@@ -31,26 +31,42 @@ registerBlockType("freeman-block/case", {
 	),
 	category: "common",
 	attributes: {
-		children: {
+		title: {
 			source: "html",
-			selector: "div",
+			selector: "h3",
+			default: "導入事例",
+		},
+		description: {
+			source: "html",
+			selector: "p",
 		},
 	},
-	edit: ({ className, setAttributes, attributes }) => {
-		const { children } = attributes;
+	edit: ({ className, attributes, setAttributes }) => {
+		const { title, description } = attributes;
+
 		return (
 			<div className={className}>
-				<h3>導入事例</h3>
 				<RichText
-					tagName="div"
-					onChange={(children) => setAttributes({ children })}
-					value={children}
+					tagName="h3"
+					onChange={(title) => setAttributes({ title })}
+					value={title}
+				/>
+				<RichText
+					tagName="p"
+					onChange={(description) => setAttributes({ description })}
+					value={description}
 				/>
 			</div>
 		);
 	},
 	save: ({ className, attributes }) => {
-		const { children } = attributes;
-		return <div className={className}>{children}</div>;
+		const { title, description } = attributes;
+
+		return (
+			<div className={className}>
+				<RichText.Content tagName="h3" value={title} />
+				<RichText.Content tagName="p" value={description} />
+			</div>
+		);
 	},
 });
