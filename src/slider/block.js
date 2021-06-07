@@ -1,7 +1,7 @@
 import "./editor.scss";
 
 const { registerBlockType } = wp.blocks;
-const { MediaUpload, MediaUploadCheck } = wp.editor;
+const { MediaUpload, MediaUploadCheck } = wp.blockEditor;
 const { Button } = wp.components;
 
 registerBlockType("freeman-block/slider", {

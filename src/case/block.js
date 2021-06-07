@@ -1,7 +1,7 @@
 import "./editor.scss";
 
 const { registerBlockType } = wp.blocks;
-const RichText = wp.editor.RichText;
+const RichText = wp.blockEditor.RichText;
 
 registerBlockType("freeman-block/case", {
 	title: "導入事例",
