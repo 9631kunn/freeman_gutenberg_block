@@ -1,13 +1,12 @@
 <?php
 /**
  * Plugin Name: FREEMAN block
+ * Plugin URI: https://github.com/9631kunn/freeman_gutenberg_block
  * Description: 投稿作業を効率化するためのプラグインです
  * Author: 9631kunn
+ * Author URI: https://31navi.com
  * Version: 1.0.0
- * License: GPL2+
- * License URI: https://www.gnu.org/licenses/gpl-2.0.txt
- *
- * @package CGB
+ * License: GPL2
  */
 
 // Exit if accessed directly.
