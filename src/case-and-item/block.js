@@ -43,19 +43,14 @@ registerBlockType("freeman-block/case-and-item", {
 						"core/column",
 						{},
 						[
-							["core/heading", { placeholder: "導入事例", level: 3 }],
+							["core/heading", { content: "導入事例", level: 3 }],
 							["core/paragraph", { placeholder: "ここにテキストが入ります" }],
 						],
 					],
 					[
 						"core/column",
 						{},
-						[
-							[
-								"core/shortcode",
-								{ text: '[the_product id="1" layout="square"]' },
-							],
-						],
+						[["core/shortcode", { text: '[the_product id="1" /]' }]],
 					],
 				],
 			],
