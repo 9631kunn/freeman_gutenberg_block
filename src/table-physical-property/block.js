@@ -47,6 +47,12 @@ registerBlockType("freeman-block/table-physical-property", {
 					body: [
 						{
 							cells: [
+								{ content: "固有含有率", tag: "td" },
+								{ content: "テキスト", tag: "td" },
+							],
+						},
+						{
+							cells: [
 								{ content: "粒子電荷", tag: "td" },
 								{ content: "テキスト", tag: "td" },
 							],

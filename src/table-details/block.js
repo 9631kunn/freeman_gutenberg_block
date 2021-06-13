@@ -82,11 +82,10 @@ registerBlockType("freeman-block/table-details", {
 						},
 					],
 					foot: [],
-					className: "is-style-fm_table_physical_property",
+					className: "is-style-fm_table_details",
 				},
 			],
 		];
-
 		const blockProps = useBlockProps();
 
 		return (
