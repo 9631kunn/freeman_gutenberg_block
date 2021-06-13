@@ -1,8 +1,8 @@
 const { registerBlockType } = wp.blocks;
 const { InnerBlocks, useBlockProps } = wp.blockEditor;
 
-registerBlockType("freeman-block/catalog-button", {
-	title: "カタログボタン",
+registerBlockType("freeman-block/separator", {
+	title: "区切り線",
 	icon: (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -32,10 +32,10 @@ registerBlockType("freeman-block/catalog-button", {
 	edit: ({ className }) => {
 		const template = [
 			[
-				"core/button",
+				"core/separator",
 				{
-					text: "カタログPDF",
-					className: "is-style-fm_catalog_button",
+					text: "区切り線",
+					className: "is-style-fm_separator",
 				},
 			],
 		];

@@ -7,4 +7,5 @@ import "./case/block.js";
 import "./case-and-item/block.js";
 import "./remarks/block.js";
 import "./slider/block.js";
+import "./separator/block.js";
 import "./catalog-button/block.js";
