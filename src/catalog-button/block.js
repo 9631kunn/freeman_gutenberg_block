@@ -1,8 +1,10 @@
+import "./editor.scss";
+
 const { registerBlockType } = wp.blocks;
 const { InnerBlocks, useBlockProps } = wp.blockEditor;
 
-registerBlockType("freeman-block/table-details", {
-	title: "用途や特徴などの表",
+registerBlockType("freeman-block/catalog-button", {
+	title: "カタログボタン",
 	icon: (
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -27,62 +29,15 @@ registerBlockType("freeman-block/table-details", {
 			/>
 		</svg>
 	),
-	category: "common",
+	category: "design",
 
 	edit: ({ className }) => {
 		const template = [
 			[
-				"core/table",
+				"core/button",
 				{
-					hasFixedLayout: false,
-					caption: "",
-					head: [],
-					body: [
-						{
-							cells: [
-								{ content: "用途", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-						{
-							cells: [
-								{ content: "特徴", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-						{
-							cells: [
-								{ content: "メーカー", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-						{
-							cells: [
-								{ content: "ブランド", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-						{
-							cells: [
-								{ content: "材質", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-						{
-							cells: [
-								{ content: "物性", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-						{
-							cells: [
-								{ content: "色", tag: "td" },
-								{ content: "テキスト", tag: "td" },
-							],
-						},
-					],
-					foot: [],
-					className: "is-style-fm_table_physical_property",
+					text: "カタログPDF",
+					className: "is-style-fm_catalog_button",
 				},
 			],
 		];
@@ -95,7 +50,6 @@ registerBlockType("freeman-block/table-details", {
 			</div>
 		);
 	},
-
 	save: ({ className }) => {
 		const blockProps = useBlockProps.save();
 

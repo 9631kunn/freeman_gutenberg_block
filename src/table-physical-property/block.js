@@ -1,5 +1,3 @@
-import "./editor.scss";
-
 const { registerBlockType } = wp.blocks;
 const { InnerBlocks, useBlockProps } = wp.blockEditor;
 
