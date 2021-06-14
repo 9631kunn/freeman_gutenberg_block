@@ -33,7 +33,7 @@ registerBlockType("freeman-block/related-products", {
 	edit: () => {
 		const template = [
 			["core/heading", { content: "関連商品一覧", level: 4 }],
-			["core/shortcode", { text: '[the_product id="1" /]' }],
+			["core/shortcode", { text: '[the_products id="1" layout="column" /]' }],
 		];
 
 		const blockProps = useBlockProps();
