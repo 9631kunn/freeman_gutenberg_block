@@ -60,7 +60,7 @@ registerBlockType("freeman-block/case-and-item", {
 		const blockProps = useBlockProps();
 
 		return (
-			<div {...blockProps} className={className}>
+			<div {...blockProps} className={className} data-block="freeman-block">
 				<InnerBlocks template={template} templateLock="all" />
 			</div>
 		);
@@ -69,7 +69,7 @@ registerBlockType("freeman-block/case-and-item", {
 		const blockProps = useBlockProps.save();
 
 		return (
-			<div {...blockProps} className={className}>
+			<div {...blockProps} className={className} data-block="freeman-block">
 				<InnerBlocks.Content />
 			</div>
 		);

@@ -39,7 +39,11 @@ registerBlockType("freeman-block/related-products", {
 		const blockProps = useBlockProps();
 
 		return (
-			<div {...blockProps} className="single-related">
+			<div
+				{...blockProps}
+				className="single-related"
+				data-block="freeman-block"
+			>
 				<InnerBlocks
 					className="products"
 					template={template}
@@ -52,7 +56,11 @@ registerBlockType("freeman-block/related-products", {
 		const blockProps = useBlockProps.save();
 
 		return (
-			<div {...blockProps} className="single-related">
+			<div
+				{...blockProps}
+				className="single-related"
+				data-block="freeman-block"
+			>
 				<InnerBlocks.Content className="products" />
 			</div>
 		);

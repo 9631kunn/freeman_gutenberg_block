@@ -233,7 +233,7 @@ registerBlockType("freeman-block/table-thick", {
 		const blockProps = useBlockProps();
 
 		return (
-			<div {...blockProps} className={className}>
+			<div {...blockProps} className={className} data-block="freeman-block">
 				<InnerBlocks template={template} templateLock="all" />
 			</div>
 		);
@@ -242,7 +242,7 @@ registerBlockType("freeman-block/table-thick", {
 		const blockProps = useBlockProps.save();
 
 		return (
-			<div {...blockProps} className={className}>
+			<div {...blockProps} className={className} data-block="freeman-block">
 				<InnerBlocks.Content />
 			</div>
 		);

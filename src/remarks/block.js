@@ -47,7 +47,7 @@ registerBlockType("freeman-block/remarks", {
 		const { title, description } = attributes;
 
 		return (
-			<div className={className}>
+			<div className={className} data-block="freeman-block">
 				<RichText
 					tagName="h3"
 					onChange={(title) => setAttributes({ title })}
@@ -65,7 +65,7 @@ registerBlockType("freeman-block/remarks", {
 		const { title, description } = attributes;
 
 		return (
-			<div className={className}>
+			<div className={className} data-block="freeman-block">
 				<RichText.Content tagName="h3" value={title} />
 				<RichText.Content tagName="p" value={description} />
 			</div>

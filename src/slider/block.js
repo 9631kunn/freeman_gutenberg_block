@@ -96,7 +96,7 @@ registerBlockType("freeman-block/slider", {
 		};
 
 		return (
-			<div className={className}>
+			<div className={className} data-block="freeman-block">
 				<MediaUploadCheck>
 					<MediaUpload
 						multiple={true}
@@ -150,7 +150,7 @@ registerBlockType("freeman-block/slider", {
 		};
 
 		return (
-			<div className={className}>
+			<div className={className} data-block="freeman-block">
 				<div className="swiper-container single-slider js-single-slider">
 					<div className="swiper-wrapper">
 						{getImagesSave(attributes.imageUrl, attributes.imageAlt)}
