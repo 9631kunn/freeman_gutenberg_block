@@ -28,6 +28,7 @@ registerBlockType("freeman-block/separator", {
 		</svg>
 	),
 	category: "design",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

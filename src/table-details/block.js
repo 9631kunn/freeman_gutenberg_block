@@ -28,6 +28,7 @@ registerBlockType("freeman-block/table-details", {
 		</svg>
 	),
 	category: "common",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

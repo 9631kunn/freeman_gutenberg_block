@@ -44,6 +44,8 @@ registerBlockType("freeman-block/slider", {
 			default: [],
 		},
 	},
+	example: {},
+
 	edit: (props) => {
 		const { className, attributes, setAttributes } = props;
 

@@ -30,6 +30,7 @@ registerBlockType("freeman-block/case-and-item", {
 		</svg>
 	),
 	category: "common",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

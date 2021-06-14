@@ -28,6 +28,7 @@ registerBlockType("freeman-block/catalog-button", {
 		</svg>
 	),
 	category: "design",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

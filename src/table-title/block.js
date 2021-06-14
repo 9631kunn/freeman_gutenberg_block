@@ -37,6 +37,8 @@ registerBlockType("freeman-block/table-title", {
 			default: "テーブルのタイトル",
 		},
 	},
+	example: {},
+
 	edit: ({ className, attributes, setAttributes }) => {
 		const { title } = attributes;
 

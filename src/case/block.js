@@ -41,6 +41,8 @@ registerBlockType("freeman-block/case", {
 			selector: "p",
 		},
 	},
+	example: {},
+
 	edit: ({ className, attributes, setAttributes }) => {
 		const { title, description } = attributes;
 

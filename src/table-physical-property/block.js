@@ -28,6 +28,7 @@ registerBlockType("freeman-block/table-physical-property", {
 		</svg>
 	),
 	category: "common",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

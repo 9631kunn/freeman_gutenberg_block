@@ -29,6 +29,7 @@ registerBlockType("freeman-block/related-products", {
 	),
 	category: "design",
 	className: "single-related",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

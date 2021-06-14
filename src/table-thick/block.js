@@ -28,6 +28,7 @@ registerBlockType("freeman-block/table-thick", {
 		</svg>
 	),
 	category: "common",
+	example: {},
 
 	edit: ({ className }) => {
 		const template = [

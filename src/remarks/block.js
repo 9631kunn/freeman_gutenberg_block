@@ -41,6 +41,8 @@ registerBlockType("freeman-block/remarks", {
 			selector: "p",
 		},
 	},
+	example: {},
+
 	edit: ({ className, attributes, setAttributes }) => {
 		const { title, description } = attributes;
 
