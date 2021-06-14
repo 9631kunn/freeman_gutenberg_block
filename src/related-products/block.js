@@ -28,10 +28,9 @@ registerBlockType("freeman-block/related-products", {
 		</svg>
 	),
 	category: "design",
-	className: "single-related",
 	example: {},
 
-	edit: ({ className }) => {
+	edit: () => {
 		const template = [
 			["core/heading", { content: "関連商品一覧", level: 4 }],
 			["core/shortcode", { text: '[the_product id="1" /]' }],
@@ -40,7 +39,7 @@ registerBlockType("freeman-block/related-products", {
 		const blockProps = useBlockProps();
 
 		return (
-			<div {...blockProps} className={className}>
+			<div {...blockProps} className="single-related">
 				<InnerBlocks
 					className="products"
 					template={template}
@@ -49,11 +48,11 @@ registerBlockType("freeman-block/related-products", {
 			</div>
 		);
 	},
-	save: ({ className }) => {
+	save: () => {
 		const blockProps = useBlockProps.save();
 
 		return (
-			<div {...blockProps} className={className}>
+			<div {...blockProps} className="single-related">
 				<InnerBlocks.Content className="products" />
 			</div>
 		);
