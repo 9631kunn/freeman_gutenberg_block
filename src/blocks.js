@@ -9,3 +9,4 @@ import "./remarks/block.js";
 import "./slider/block.js";
 import "./separator/block.js";
 import "./catalog-button/block.js";
+import "./related-products/block.js";
